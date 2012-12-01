@@ -99,5 +99,5 @@ precmd() {
     LANG=en_US.UTF-8 vcs_info
     psvar[1]=$vcs_info_msg_0_
 }
-PROMPT=$'%2F%n@%m%f %3F%~ %5F%1v%f %f%# '
+PROMPT=$'%2F%n@%m%f %3F%~%5F%1v%f %f%# '
 

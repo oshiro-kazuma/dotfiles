@@ -8,6 +8,6 @@ do
 		continue
 	fi
 	
-	ln -s "./$dotfile" $HOME
+	ln -Fis "$PWD/$dotfile" $HOME
 
 done

@@ -6,14 +6,13 @@ case "$OSTYPE" in
 darwin*)
   # perlbrew
   source $HOME/perl5/perlbrew/etc/bashrc
-  source $HOME/.zshrc.mac
   # kaoriya vimエイリアス
   alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
   alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
  
   # alias 
   alias o='open'
-  alias ls='ls -ahGp'
+  alias ls='ls -hGp'
   alias ld='ls -ahGp | grep /'
   alias ll='ls -ahGlp'
   alias lld='ls -ahGlp | grep /'
@@ -21,7 +20,9 @@ darwin*)
 
 # for GNU
 linux*)
-  alias ls='ls -ahp --color=auto'
+# lsに色を付ける
+  
+  alias ls='ls -hp --color=auto'
   alias ld='ls -ahp --color=auto | grep /'
   alias ll='ls -ahlp --color=auto'
   alias lld='ls -ahlp --color=auto | grep /'
@@ -39,18 +40,13 @@ setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 
 # Groovy文字化け対策
-xport JAVA_OPTS='-Dgroovy.source.encoding=UTF-8 -Dfile.encoding=UTF-8'
+export JAVA_OPTS='-Dgroovy.source.encoding=UTF-8 -Dfile.encoding=UTF-8'
 
 # Grepにヒットした文字をハイライト
 export GREP_OPTIONS='--color=auto'
 
 # bashrcから取ってきた
 export CLICOLOR=1
-
-# lsに色を付ける
-export LSCOLORS=exfxcxdxbxegedabagacad
-alias ls="ls -G --color"
-alias la='ls -a' ll='ls -la'
 
 # Set shell options     #####################
 # 有効にしてあるのは副作用の少ないもの

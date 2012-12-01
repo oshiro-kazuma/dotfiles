@@ -18,7 +18,7 @@ NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/Shougo/vimshell.git'
 NeoBundle 'git://github.com/Shougo/vinarise.git'
 NeoBundle 'git://github.com/mattn/gist-vim.git'
-
+NeoBundle 'git://github.com/Lokaltog/vim-easymotion.git'
 " solarized カラースキーム
 NeoBundle 'altercation/vim-colors-solarized'
 " mustang カラースキーム

@@ -13,6 +13,7 @@ darwin*)
   # alias 
   alias o='open'
   alias ls='ls -hGp'
+  alias la='ls -ahGp'
   alias ld='ls -ahGp | grep /'
   alias ll='ls -ahGlp'
   alias lld='ls -ahGlp | grep /'
@@ -23,6 +24,7 @@ linux*)
 # lsに色を付ける
   
   alias ls='ls -hp --color=auto'
+  alias la='ls -ahp --color=auto'
   alias ld='ls -ahp --color=auto | grep /'
   alias ll='ls -ahlp --color=auto'
   alias lld='ls -ahlp --color=auto | grep /'

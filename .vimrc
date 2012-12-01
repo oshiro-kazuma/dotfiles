@@ -27,6 +27,7 @@ let g:neocomplcache_enable_at_startup = 1
 
 " 拡張子の設定
 autocmd BufNewFile,BufRead *.twig set filetype=php
+autocmd BufNewFile,BufRead *.cpt set filetype=php
 
 " vim基本設定
 set cindent

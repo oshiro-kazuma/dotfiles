@@ -3,12 +3,7 @@
 # MacとLinuxで設定を振り分ける
 case "$OSTYPE" in
 # BSD (contains Mac)
-darwin*)
-  # perlbrew
-  source $HOME/perl5/perlbrew/etc/bashrc
-  # kaoriya vimエイリアス
-  alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-  alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
+darwin* | freebsd*)
  
   # alias 
   alias o='open'

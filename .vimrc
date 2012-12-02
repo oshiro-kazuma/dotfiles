@@ -87,7 +87,8 @@ au BufNewFile,BufRead * set tabstop=4 shiftwidth=4
 " Syntax Color
 syntax on
 set background=dark
-colorscheme desert
+"colorscheme desert
+colorscheme mrkn256
 
 set number
 set ruler
@@ -98,10 +99,37 @@ set showmatch
 set encoding=utf-8
 set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932,utf-8
 
+
+" ---- vimfiler の設定 ---
+"
 " とりあえずF2でファイラー起動
 nnoremap <F2> :VimFiler -buffer-name=explorer -split -winwidth=45 -toggle -no-quit<Cr>
 
+autocmd! FileType vimfiler call g:my_vimfiler_settings()
+function! g:my_vimfiler_settings()
+  nmap     <buffer><expr><Cr> vimfiler#smart_cursor_map("\<Plug>(vimfiler_expand_tree)", "\<Plug>(vimfiler_edit_file)")
+  nnoremap <buffer>s          :call vimfiler#mappings#do_action('my_split')<Cr>
+  nnoremap <buffer>v          :call vimfiler#mappings#do_action('my_vsplit')<Cr>
+endfunction
 
+let my_action = { 'is_selectable' : 1 }
+function! my_action.func(candidates)
+  wincmd p
+  exec 'split '. a:candidates[0].action__path
+endfunction
+call unite#custom_action('file', 'my_split', my_action)
+
+let my_action = { 'is_selectable' : 1 }                     
+function! my_action.func(candidates)
+  wincmd p
+  exec 'vsplit '. a:candidates[0].action__path
+endfunction
+call unite#custom_action('file', 'my_vsplit', my_action)
+
+" マウスを有効に
+if has('mouse')
+    set mouse=a
+endif
 
 "------- ここからコピペ ---------
 
@@ -111,7 +139,7 @@ nnoremap <F2> :VimFiler -buffer-name=explorer -split -winwidth=45 -toggle -no-qu
 "-------------------------------------------------------------------------------
 set showmatch         " 括弧の対応をハイライト
 set number            " 行番号表示
-set list              " 不可視文字表示
+"set list              " 不可視文字表示
 set listchars=tab:>.,trail:_,extends:>,precedes:< " 不可視文字の表示形式
 set display=uhex      " 印字不可能文字を16進数で表示
 

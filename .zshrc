@@ -4,8 +4,6 @@
 case "$OSTYPE" in
 # BSD (contains Mac)
 darwin* | freebsd*)
- 
-  # alias 
   alias o='open'
   alias ls='ls -hGp'
   alias la='ls -ahGp'
@@ -14,10 +12,8 @@ darwin* | freebsd*)
   alias lld='ls -ahGlp | grep /'
   ;;  
 
-# for GNU
+  # for GNU
 linux*)
-# lsに色を付ける
-  
   alias ls='ls -hp --color=auto'
   alias la='ls -ahp --color=auto'
   alias ld='ls -ahp --color=auto | grep /'

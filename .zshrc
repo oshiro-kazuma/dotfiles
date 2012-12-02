@@ -1,5 +1,8 @@
 ## Environment variable configuration
 
+# .binにパスを通す
+PATH=$PATH:$HOME/.bin
+
 # dircolorsが有効かどうか1
 which dircolors > /dev/null 2>&1
 WHICH_DIRCOLOR=$?
@@ -123,3 +126,7 @@ alias gls='git log --stat --summary'
 function ggl() {
 	w3m "http://www.google.co.jp/search?hl=ja&lr=lang_ja&q=$1"
 }
+
+# tmux statusline
+#PROMPT="$PROMPT"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+

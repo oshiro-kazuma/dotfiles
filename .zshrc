@@ -57,9 +57,9 @@ setopt auto_menu
 zstyle ':completion:*:default' menu select=1
 # 補完に色を付ける
 if [ $WHICH_DIRCOLOR = 0 ] ; then
-  zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS} ; echo "2"
+  zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 else
-  zstyle ':completion:*' list-colors di=34 fi=0 ; echo "3"
+  zstyle ':completion:*' list-colors di=34 fi=0
 fi
 # 補完の時に大文字小文字を区別しない
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'

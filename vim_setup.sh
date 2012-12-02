@@ -1,4 +1,4 @@
 #!/bin/sh
 
-git clone https://github.com/Shougo/neobundle.vim ~/.vim/neobundle.vim.git
-
+mkdir $HOME/.vimbackup
+git clone git://github.com/Shougo/neobundle.vim ~/.vim/neobundle.vim.git

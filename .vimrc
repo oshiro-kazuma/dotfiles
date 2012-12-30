@@ -19,6 +19,7 @@ NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/Shougo/vimshell.git'
 NeoBundle 'git://github.com/Shougo/vinarise.git'
 NeoBundle 'git://github.com/mattn/gist-vim.git'
+NeoBundle 'mattn/webapi-vim'
 NeoBundle 'git://github.com/Lokaltog/vim-easymotion.git'
 " ステータスラインをカッコよくする
 NeoBundle 'Lokaltog/vim-powerline'

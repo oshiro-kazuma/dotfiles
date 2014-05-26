@@ -130,3 +130,8 @@ function ggl() {
 # tmux statusline
 #PROMPT="$PROMPT"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
+# mysql prompt
+r=$'\e[1;32m'
+clear=$'\e[0m'
+export MYSQL_PS1="$mycolor\u@\d \v> $clear"
+

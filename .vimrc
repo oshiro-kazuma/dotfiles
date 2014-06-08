@@ -9,6 +9,9 @@ if has('vim_starting')
 endif
 call neobundle#rc(expand('~/.vim/bundle'))
 
+"scalaのシンタックス
+NeoBundle 'derekwyatt/vim-scala'
+
 "NeoBundle 'git://github.com/Shougo/clang_complete.git'
 "NeoBundle 'git://github.com/Shougo/echodoc.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
@@ -57,10 +60,11 @@ autocmd BufNewFile,BufRead *.twig set filetype=php
 autocmd BufNewFile,BufRead *.cpt set filetype=php
 
 " vim基本設定
+set textwidth=0
 set cindent
 set backupdir=$HOME/.vimbackup
 set directory=$HOME/.vimbackup
-set clipboard=unnamed
+"set clipboard=unnamed
 set nocompatible
 set incsearch
 set number
@@ -224,3 +228,4 @@ func! String2Hex(str)
   return out
 endfunc
 
+set tw=0

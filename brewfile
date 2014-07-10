@@ -35,13 +35,15 @@ install groovy || true
 install grails || true
 
 install scala || true
+install sbt || true
+
+#cask install github || true
+#cask install intellij-idea-community || true
+#cask install totalspaces || true
 
 cask install hipchat || true
-cask install github || true
 cask install sourcetree || true
 cask install google-chrome || true
 cask install virtualbox || true
 cask install vagrant || true
-cask install intellij-idea-community || true
-cask install totalspaces || true
 cask install iterm2 || true

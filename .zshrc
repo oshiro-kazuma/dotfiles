@@ -46,7 +46,7 @@ setopt extended_history
 # ヒストリにhistoryコマンドを記録しない
 setopt hist_no_store
 # 履歴の共有
-setopt share_history
+#setopt share_history
 # 重複したコマンドラインはヒストリに追加しない
 setopt hist_ignore_dups
 # 余分なスペースを削除してヒストリに記録する

@@ -11,6 +11,7 @@ call neobundle#rc(expand('~/.vim/bundle'))
 
 "scalaのシンタックス
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'scala.vim'
 
 "NeoBundle 'git://github.com/Shougo/clang_complete.git'
 "NeoBundle 'git://github.com/Shougo/echodoc.git'

@@ -2,12 +2,14 @@
 
 # .binにパスを通す
 PATH=$PATH:$HOME/.bin
-
+export PATH="/usr/local/bin:$PATH"
 # dircolorsが有効かどうか1
 which dircolors > /dev/null 2>&1
 WHICH_DIRCOLOR=$?
 
 [ $WHICH_DIRCOLOR = 0 ] && eval `dircolors ~/.dir_colors -b`;
+
+bindkey -e
 
 #
 # ---- 基本設定 ----
@@ -20,18 +22,18 @@ export JAVA_OPTS='-Dgroovy.source.encoding=UTF-8 -Dfile.encoding=UTF-8'
 export GREP_OPTIONS='--color=auto'
 # bashrcから取ってきた
 export CLICOLOR=1
-
+# zsh: no matches found 対策
+setopt nonomatch
 #
 # ---- Set shell options ----
 #
 # 有効にしてあるのは副作用の少ないもの
 setopt auto_cd auto_remove_slash auto_name_dirs
-setopt extended_history hist_ignore_dups hist_ignore_space prompt_subst
+setopt prompt_subst
 setopt extended_glob list_types no_beep always_last_prompt
 setopt cdable_vars sh_word_split auto_param_keys pushd_ignore_dups
 # 便利だが副作用の強いものはコメントアウト
 #setopt auto_menu  correct rm_star_silent sun_keyboard_hack
-#setopt share_history inc_append_history
 
 #
 # ---- History関連 ----
@@ -39,8 +41,26 @@ setopt cdable_vars sh_word_split auto_param_keys pushd_ignore_dups
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt hist_ignore_dups     # ignore duplication command history list
-setopt share_history        # share command history data
+# 履歴ファイルに時刻を記録
+setopt extended_history
+# ヒストリにhistoryコマンドを記録しない
+setopt hist_no_store
+# 履歴の共有
+setopt share_history
+# 重複したコマンドラインはヒストリに追加しない
+setopt hist_ignore_dups
+# 余分なスペースを削除してヒストリに記録する
+setopt hist_reduce_blanks
+# 履歴をインクリメンタルに追加
+setopt share_history inc_append_history
+# ヒストリを呼び出してから実行する間に一旦編集可能
+setopt hist_verify
+autoload history-search-end
+# 履歴検索機能のショートカット
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end
 
 # プロンプトのカラー表示を有効
 autoload -U colors
@@ -68,6 +88,8 @@ fi
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # sudoも補完の対象
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
+# Bazaar激重対策
+zstyle ':vcs_info:bzr:*' use-simple true
 
 #
 # ---- プロンプト関連の設定 ----
@@ -129,9 +151,4 @@ function ggl() {
 
 # tmux statusline
 #PROMPT="$PROMPT"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
-
-# mysql prompt
-r=$'\e[1;32m'
-clear=$'\e[0m'
-export MYSQL_PS1="$mycolor\u@\d \v> $clear"
 

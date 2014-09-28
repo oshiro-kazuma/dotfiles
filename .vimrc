@@ -5,13 +5,15 @@ set nocompatible
 filetype off
 
 if has('vim_starting')
-	set runtimepath+=~/.vim/neobundle.vim.git
+  set runtimepath+=~/.vim/neobundle.vim.git
 endif
 call neobundle#rc(expand('~/.vim/bundle'))
 
 "scalaのシンタックス
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'scala.vim'
+
+NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
 
 "NeoBundle 'git://github.com/Shougo/clang_complete.git'
 "NeoBundle 'git://github.com/Shougo/echodoc.git'

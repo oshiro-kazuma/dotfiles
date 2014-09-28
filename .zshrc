@@ -129,6 +129,7 @@ freebsd*)
 
   ;;  
 esac
+alias lr='ls -ltr'
 
 # Git alias
 alias pull='git pull'

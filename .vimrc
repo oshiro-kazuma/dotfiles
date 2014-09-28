@@ -63,6 +63,7 @@ autocmd BufNewFile,BufRead *.twig set filetype=php
 autocmd BufNewFile,BufRead *.cpt set filetype=php
 
 " vim基本設定
+set hlsearch
 set textwidth=0
 set cindent
 set backupdir=$HOME/.vimbackup

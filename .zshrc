@@ -132,6 +132,7 @@ esac
 alias lr='ls -ltr'
 
 # Git alias
+alias g='git'
 alias pull='git pull'
 alias push='git push'
 alias gm='git commit -m"$*"'

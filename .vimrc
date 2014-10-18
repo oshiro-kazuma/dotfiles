@@ -72,14 +72,14 @@ set directory=$HOME/.vimbackup
 set nocompatible
 set incsearch
 set number
-set tabstop=4
+set expandtab
 set showmatch
 set smartcase
 set smartindent
 set whichwrap=b,s,h,l,<,>,[,]
 set nowrapscan
 au BufNewFile,BufRead * set iminsert=0
-au BufNewFile,BufRead * set tabstop=4 shiftwidth=4
+au BufNewFile,BufRead * set tabstop=2 shiftwidth=2
 
 " status color
 " vim-pureline使わない場合

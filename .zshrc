@@ -39,12 +39,17 @@ setopt cdable_vars sh_word_split auto_param_keys pushd_ignore_dups
 # ---- History関連 ----
 #
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+
+#メモリに保存される履歴の件数
+export HISTSIZE=1000
+# 履歴ファイルに保存される履歴の件数
+export SAVEHIST=100000
 # 履歴ファイルに時刻を記録
 setopt extended_history
 # ヒストリにhistoryコマンドを記録しない
 setopt hist_no_store
+# 開始と終了を記録
+setopt EXTENDED_HISTORY
 # 履歴の共有
 #setopt share_history
 # 重複したコマンドラインはヒストリに追加しない
@@ -61,12 +66,16 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
-
+# インクリメンタルからの検索
+bindkey "^R" history-incremental-search-backward
+bindkey "^S" history-incremental-search-forward
 # プロンプトのカラー表示を有効
 autoload -U colors
 colors
 # コマンド訂正
 # setopt correct
+
+bindkey '^h' zaw-history
 
 #
 # ---- 補完関係の設定 ----
@@ -154,3 +163,5 @@ function ggl() {
 # tmux statusline
 #PROMPT="$PROMPT"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
+# zaw plugin
+source $HOME/.zsh_plugin/zaw/zaw.zsh

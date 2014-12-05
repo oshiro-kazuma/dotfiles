@@ -1,8 +1,10 @@
 tap phinze/homebrew-cask || true
 tap homebrew/versions|| true
 tap josegonzalez/php|| true
+tap peco/peco || true
 update || true
 
+install peco || true
 install brew-cask || true
 install git || true
 install gist || true

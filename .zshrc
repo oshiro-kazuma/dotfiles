@@ -41,9 +41,9 @@ setopt cdable_vars sh_word_split auto_param_keys pushd_ignore_dups
 HISTFILE=~/.zsh_history
 
 #メモリに保存される履歴の件数
-export HISTSIZE=1000
+export HISTSIZE=1000000
 # 履歴ファイルに保存される履歴の件数
-export SAVEHIST=100000
+export SAVEHIST=1000000
 # 履歴ファイルに時刻を記録
 setopt extended_history
 # ヒストリにhistoryコマンドを記録しない

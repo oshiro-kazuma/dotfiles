@@ -1,7 +1,7 @@
-tap phinze/homebrew-cask || true
-tap homebrew/versions|| true
-tap josegonzalez/php|| true
-tap peco/peco || true
+#tap phinze/homebrew-cask || true
+#tap homebrew/versions|| true
+#tap josegonzalez/php|| true
+#tap peco/peco || true
 update || true
 
 install peco || true
@@ -36,16 +36,17 @@ install cmake || true
 install groovy || true
 install grails || true
 
+install java || true
 install scala || true
 install sbt || true
 
-#cask install github || true
-#cask install intellij-idea-community || true
-#cask install totalspaces || true
-
-cask install hipchat || true
 cask install sourcetree || true
 cask install google-chrome || true
 cask install virtualbox || true
 cask install vagrant || true
 cask install iterm2 || true
+
+#cask install github || true
+#cask install intellij-idea-community || true
+#cask install totalspaces || true
+#cask install hipchat || true

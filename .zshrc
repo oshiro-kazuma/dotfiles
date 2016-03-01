@@ -3,6 +3,10 @@
 # .binにパスを通す
 PATH=$PATH:$HOME/.bin
 export PATH="/usr/local/bin:$PATH"
+
+# coreutils
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
 # dircolorsが有効かどうか1
 which dircolors > /dev/null 2>&1
 WHICH_DIRCOLOR=$?

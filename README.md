@@ -7,3 +7,8 @@ vim update
 :NeoBundleInstall
 :NeoBundleUpdate
 ```
+
+change login shell to zsh
+```
+chsh -s /bin/zsh
+```

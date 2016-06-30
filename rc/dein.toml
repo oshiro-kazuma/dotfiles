@@ -1,6 +1,22 @@
 # 基本は github.com のレポジトリーを指定するだけ
 [[plugins]]
 repo = 'Shougo/dein.vim'
+repo = 'Shougo/neosnippet'
+repo = 'aharisu/vim_goshrepl.git'
+repo = 'wlangstroth/vim-racket'
+repo = 'tpope/vim-surround.git'
+repo = 'kien/rainbow_parentheses.vim'
+repo = 'scrooloose/syntastic.git'
+repo = 'MicahElliott/vrod'
+repo = 'guns/vim-sexp'
+repo = 'tpope/vim-sexp-mappings-for-regular-people'
+repo = 'wlangstroth/vim-racket'
+repo = 'fatih/vim-go'
+
+# colorscheme
+[[plugins]]
+repo = 'tomasr/molokai.git'
+repo = 'w0ng/vim-hybrid'
 
 # git clone 後、実行すべきコマンドがある場合はこんな感じ
 [[plugins]]

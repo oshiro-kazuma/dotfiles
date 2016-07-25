@@ -1,3 +1,6 @@
+" ------------------------------------
+" dein.vim
+" ------------------------------------
 " vimrc に以下のように追記
 
 " プラグインが実際にインストールされるディレクトリ
@@ -38,3 +41,10 @@ if dein#check_install()
   call dein#install()
 endif
 
+" ------------------------------------
+" colorscheme
+" ------------------------------------
+syntax on
+colorscheme default
+
+highlight Normal ctermbg=none

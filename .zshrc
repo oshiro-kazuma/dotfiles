@@ -169,3 +169,4 @@ function ggl() {
 
 # zaw plugin
 source $HOME/.zsh_plugin/zaw/zaw.zsh
+source $HOME/.dotfiles/iterm2.zsh

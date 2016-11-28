@@ -79,7 +79,7 @@ colors
 # コマンド訂正
 # setopt correct
 
-bindkey '^h' zaw-history
+bindkey '^e' zaw-history
 
 #
 # ---- 補完関係の設定 ----

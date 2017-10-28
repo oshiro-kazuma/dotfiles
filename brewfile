@@ -1,11 +1,9 @@
-#tap phinze/homebrew-cask || true
-#tap homebrew/versions|| true
-#tap josegonzalez/php|| true
-#tap peco/peco || true
 update || true
 
+install go || true
+
+install htop || true
 install peco || true
-install brew-cask || true
 install git || true
 install gist || true
 install tmux || true
@@ -13,12 +11,12 @@ install wemux || true
 install tree || true
 install openssl || true
 install cmake || true
+install automake || true
+
 install zsh || true
 install wget || true
 install curl || true
-install cmake || true
 install libtool || true
-install automake || true
 
 install jq || true
 install python3 || true
@@ -31,22 +29,13 @@ install mysql || true
 install sqlite || true
 install mongodb || true
 install memcached || true
-install cmake || true
-
-install groovy || true
-install grails || true
 
 install java || true
 install scala || true
 install sbt || true
 
-cask install sourcetree || true
-cask install google-chrome || true
-cask install virtualbox || true
-cask install vagrant || true
-cask install iterm2 || true
+install rbenv  || true
+install ruby-build || true
 
-#cask install github || true
-#cask install intellij-idea-community || true
-#cask install totalspaces || true
-#cask install hipchat || true
+#install groovy || true
+#install grails || true

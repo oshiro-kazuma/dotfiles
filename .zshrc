@@ -79,7 +79,7 @@ colors
 # コマンド訂正
 # setopt correct
 
-bindkey '^e' zaw-history
+# bindkey '^e' zaw-history
 
 #
 # ---- 補完関係の設定 ----
@@ -170,3 +170,9 @@ function ggl() {
 # zaw plugin
 source $HOME/.zsh_plugin/zaw/zaw.zsh
 source $HOME/.dotfiles/iterm2.zsh
+export PATH="$HOME/.embulk/bin:$PATH"
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"

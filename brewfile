@@ -7,7 +7,6 @@ install peco || true
 install git || true
 install gist || true
 install tmux || true
-install wemux || true
 install tree || true
 install openssl || true
 install cmake || true
@@ -19,23 +18,17 @@ install curl || true
 install libtool || true
 
 install jq || true
-install python3 || true
-install ruby-build || true
-install rbenv || true
-install cpanminus || true
-
 install nginx ||  true
 install mysql || true
-install sqlite || true
-install mongodb || true
-install memcached || true
 
 install java || true
 install scala || true
 install sbt || true
 
-install rbenv  || true
-install ruby-build || true
+#install wemux || true
 
 #install groovy || true
 #install grails || true
+#install sqlite || true
+#install mongodb || true
+#install memcached || true

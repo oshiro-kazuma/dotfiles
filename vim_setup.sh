@@ -1,4 +1,4 @@
 #!/bin/sh
 
 mkdir $HOME/.vimbackup
-ln -Fis "$PWD/rc" $HOME/.vim
+ln -Fis "$PWD/rc" $HOME/.vim/rc

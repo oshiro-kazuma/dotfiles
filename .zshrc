@@ -1,8 +1,14 @@
 ## Environment variable configuration
 
+setopt GLOB_DOTS
+
 # .binにパスを通す
 PATH=$PATH:$HOME/.bin
 export PATH="/usr/local/bin:$PATH"
+
+# gopath
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # coreutils
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -176,3 +182,30 @@ export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
+# peco ghq
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
+
+# peco history
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tac  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
+
+PATH=$PATH:$HOME/bin/flutter/bin
+
+eval "$(direnv hook zsh)"

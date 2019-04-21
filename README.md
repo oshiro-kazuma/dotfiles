@@ -5,13 +5,14 @@ dotfiles
 
 ### homebrew install
 
-https://brew.sh/index_ja
+```
+./install-brew.sh
+```
 
-### execute setup shell
+### execute setup
 
 ```
-brew instal vim
-brew instal coreutils
+make install
 ```
 
 ### change login shell to zsh

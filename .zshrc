@@ -165,11 +165,6 @@ alias gl="git log --graph --pretty='format:%C(yellow)%h%Creset %C(magenta)%cd%Cr
 alias glog='git log --graph --decorate --pretty=format:"%ad [%cn] <c:%h t:%t p:%p> %n %Cgreen%d%Creset %s %n" --stat -p'
 alias gls='git log --stat --summary'
 
-# alias
-function ggl() {
-	w3m "http://www.google.co.jp/search?hl=ja&lr=lang_ja&q=$1"
-}
-
 # tmux statusline
 #PROMPT="$PROMPT"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 

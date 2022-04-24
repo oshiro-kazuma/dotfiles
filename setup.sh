@@ -11,4 +11,4 @@ do
 done
 
 mkdir -p $HOME/.zsh_plugin/ && cd $HOME/.zsh_plugin/
-git clone git://github.com/zsh-users/zaw.git
+git clone git@github.com:zsh-users/zaw.git

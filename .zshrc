@@ -209,3 +209,6 @@ bindkey '^R' peco-history-selection
 PATH=$PATH:$HOME/bin/flutter/bin
 
 eval "$(direnv hook zsh)"
+
+alias x86='arch -x86_64 zsh'
+alias arm='arch -arm64e zsh'

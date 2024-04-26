@@ -1,6 +1,12 @@
 dotfiles
 ========
 
+## Setup new pc
+
+ - install brew (https://brew.sh/ja/)
+ - install google drive
+   - `brew install --cask google-drive`
+
 ## Setup
 
 ### homebrew install

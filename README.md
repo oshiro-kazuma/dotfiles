@@ -31,3 +31,11 @@ make install
 ```
 chsh -s /bin/zsh
 ```
+
+### brew bundle
+
+install from Brewfile
+
+```
+brew bundle
+```

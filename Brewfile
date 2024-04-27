@@ -1,3 +1,4 @@
+cask_args appdir: "/Applications"
 #tap "caskroom/versions"
 #tap "heroku/brew"
 #tap "homebrew/bundle"
@@ -5,45 +6,62 @@
 #tap "homebrew/cask-versions"
 #tap "homebrew/core"
 #tap "homebrew/services"
+
+##### Basic #####
 brew "vim"
-brew "coreutils"
+
+#### Cli #####
+brew "ghq"
 brew "ctop"
 brew "direnv"
-#brew "docker", link: false
-brew "ghq"
-brew "gibo"
-brew "git-lfs"
-brew "github-markdown-toc"
+brew "peco"
 brew "readline"
-brew "xz"
-brew "gnupg"
-brew "graphicsmagick"
+brew "the_silver_searcher"
+brew "unar"
+brew "zlib"
+
+##### cli-2 #####
+brew "rclone"
+#brew "gibo"
+#brew "git-lfs"
+#brew "github-markdown-toc"
+#brew "gnupg"
+#brew "graphicsmagick"
+
+##### Developer
+brew "postgresql"
+brew "terraform"
 brew "htop"
 brew "httpie"
 brew "imagemagick"
 brew "jq"
 brew "mysql"
-brew "peco"
-brew "postgresql"
-brew "rclone"
-brew "terraform"
-brew "the_silver_searcher"
+#brew "xz"
+#brew "heroku/brew/heroku"
+
+##### Linux #####
+brew "coreutils"
 brew "tree"
-brew "unar"
-brew "zlib"
-brew "heroku/brew/heroku"
-cask "alfred"
-cask "google-chrome"
+
+##### Cask #####
+
 #cask "google-japanese-ime"
-cask "gyazo"
-cask "insomnia"
-cask "intellij-idea"
+#cask "alfred"
+#cask "paw"
+#cask "insomnia"
+#cask "gyazo"
+cask "google-chrome"
 cask "iterm2"
 cask "kdiff3"
-cask "paw"
 cask "slack"
 cask "sourcetree"
-cask "zulu8"
-#cask "android-studio"
 cask "notion"
 cask "docker"
+
+##### JDK #####
+#cask "zulu8"
+
+###### JetbBains #####
+
+cask "intellij-idea"
+#cask "android-studio"

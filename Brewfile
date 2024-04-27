@@ -21,7 +21,7 @@ brew "unar"
 brew "zlib"
 
 ##### cli-2 #####
-brew "rclone"
+#brew "rclone"
 #brew "gibo"
 #brew "git-lfs"
 #brew "github-markdown-toc"
@@ -57,11 +57,16 @@ cask "slack"
 cask "sourcetree"
 cask "notion"
 cask "docker"
-
+cask "obsidian"
+cask "1password"
 ##### JDK #####
 #cask "zulu8"
 
 ###### JetbBains #####
 
 cask "intellij-idea"
+cask "pycharm"
+cask "webstorm"
+cask "goland"
 #cask "android-studio"
+

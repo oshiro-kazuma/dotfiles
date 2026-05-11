@@ -160,7 +160,6 @@ alias gst="git status"
 alias gd="git diff"
 alias br="git branch"
 alias ga="git add ."
-alias gh="git help"
 alias gl="git log --graph --pretty='format:%C(yellow)%h%Creset %C(magenta)%cd%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset' --date=iso"
 alias glog='git log --graph --decorate --pretty=format:"%ad [%cn] <c:%h t:%t p:%p> %n %Cgreen%d%Creset %s %n" --stat -p'
 alias gls='git log --stat --summary'
@@ -198,6 +197,14 @@ function peco-history-selection() {
 }
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
+
+function pet-select() {
+  BUFFER=$(pet search --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle redisplay
+}
+zle -N pet-select
+bindkey '^V' pet-select
 
 PATH=$PATH:$HOME/bin/flutter/bin
 

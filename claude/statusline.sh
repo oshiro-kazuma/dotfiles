@@ -74,7 +74,7 @@ if [ ! -f "$otel_cache" ]; then
     done
     printf '%s' "$hits" | sort -u | grep -v '^$' > "$otel_cache" 2>/dev/null || true
 fi
-if [ -s "$otel_cache" ]; then
+if [ -s "$otel_cache" ] && [ "${STATUSLINE_OTEL_DISABLED:-0}" != "1" ]; then
     otel_count=$(wc -l < "$otel_cache" | tr -d ' ')
     otel_warn="$(printf '\033[41;97m') ⚠ OTEL:${otel_count} $(printf '\033[0m') "
 fi
